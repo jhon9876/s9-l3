@@ -13,9 +13,9 @@ function App() {
     <div className="App">
       <MyNav />
       <Welcome />
-      {/* <SingleBook /> */}
+      <SingleBook Libri={books} />
       {/* <AllTheBooks /> */}
-      <BookList BooksArray={books} />
+      {/* <BookList BooksArray={books} /> */}
       <MyFooter />
     </div>
   );

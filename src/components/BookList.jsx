@@ -4,10 +4,17 @@ import { Component } from "react";
 
 class BookList extends Component {
   render() {
+    // console.log(this.props.BooksArray);
     return (
       <Container fluid>
         <Row>
-          <SingleItem />
+          {this.props.BooksArray.map((single) => {
+            return (
+              <Col key={single.asin}>
+                <SingleItem imgLink={single.img} imgTitle={single.title} />
+              </Col>
+            );
+          })}
         </Row>
       </Container>
     );
