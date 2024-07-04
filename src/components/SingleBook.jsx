@@ -1,21 +1,22 @@
+import { Component } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 
-const SingleBook = (props) => {
-  console.log(props);
-  return (
-    <Container fluid>
-      <Row className="">
-        <Col className="d-flex justify-content-center" xs={12} md={12} lg={12}>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={props.bookInformation.img} />
-            <Card.Body>
-              <Card.Title>{props.bookInformation.title}</Card.Title>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
-  );
-};
+class SingleBook extends Component {
+  render() {
+    return (
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Body>
+          <Card.Title>Card Title</Card.Title>
+          <Card.Text>
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </Card.Text>
+          <Button variant="primary">Go somewhere</Button>
+        </Card.Body>
+      </Card>
+    );
+  }
+}
 
 export default SingleBook;
